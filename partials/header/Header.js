@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
         width: 30,
         alignSelf: 'center',
         justifyContent: 'center',
-        marginTop: 10
+        marginTop: 12
     },
     menuButtonContainer: {
         height: 60,
         width: 60,
         borderRadius: 80/2,
-        borderWidth: 4,
+        borderWidth: 3,
         borderColor: '#fff',
         marginTop: 40,
         marginLeft: 15

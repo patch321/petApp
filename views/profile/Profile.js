@@ -17,9 +17,55 @@ export class Profile extends React.Component{
                 </View>                
                 <View style={{ height: '75%'}} >
                     <View style={[styles.headerText, {width: '90%', alignSelf: 'center'}]}>
-                        <Text style={{paddingTop: 80, fontSize: 24, color: "#44B0B2"}}> Personal </Text>
+                        <Text style={{paddingTop: 60, fontSize: 24, color: "#44B0B2"}}> Personal </Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >First Name</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >Janae</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Last Name</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >Hartley</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Address</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >4225 SE 46th St</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >City</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >Oklahoma City</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Zip</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >73135</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >State</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >OK</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Phone</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >(405) 606-1983</Text>
+                    </View>
+
+                    <View style={[styles.headerText, {width: '90%', alignSelf: 'center'}]}>
+                        <Text style={{paddingTop: 40, fontSize: 24, color: "#44B0B2"}}> Account Info </Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Email</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >JanaeKHartley@gmail.com</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Password</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >*****</Text>
+                    </View>
+                    <View style={[styles.infoRow, {width: '90%'}]}>
+                        <Text style={{ color: '#44B0B2', fontSize: 15 }} >Account Level</Text>
+                        <Text style={{ color: "#707070", fontSize: 15 }} >Free</Text>
                     </View>
                 </View>
+        
+        {/* Profile Pic */}
                 <Transition shared="profilePic">
                     <View style={styles.profileOutline}>
                         <Image  source={{uri:'https://image.ibb.co/gSR7Tz/cutmypic_1.png'}} 
@@ -58,5 +104,11 @@ const styles =  StyleSheet.create({
         paddingLeft: 24,
         borderBottomWidth: 2,
         borderBottomColor: '#44B0B2',
+    }, infoRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignSelf: 'center',
+        fontSize: 18,
+        paddingTop: 10
     }
 })
