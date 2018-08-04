@@ -1,18 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator } from "react-navigation";
+import { StyleSheet } from 'react-native';
+import { FluidNavigator } from "react-navigation-fluid-transitions";
 import { Dashboard } from "./views/dashboard/Dashboard.js";
+import { Profile } from "./views/profile/Profile.js";
 
-const RootStack = createStackNavigator({
-	Dashboard: {
-		screen: Dashboard
-	}
+const Navigator = FluidNavigator({
+	DashboardRT: { screen: Dashboard },
+	ProfileRT: { screen : Profile} 
+},{
+
 })
 
 export default class App extends React.Component {
 	render() {
 		return (
-			<RootStack />
+			<Navigator />
 		);
 	}
 }

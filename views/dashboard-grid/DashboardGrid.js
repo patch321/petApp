@@ -13,7 +13,7 @@ export class DashboardGrid extends React.Component{
         
             {/* First Row */}
                 <View style={{flexDirection: 'row', height: '33%'}}>
-                    <TouchableOpacity style={styles.gridButton}> 
+                    <TouchableOpacity style={styles.gridButton} onPress={() => this.props.navigation.navigate('ProfileRT')}> 
                         <Image  source={ require('./contacts.png')} 
                                 style={{alignSelf: 'center'}}
                         />
