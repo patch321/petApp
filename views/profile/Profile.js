@@ -13,7 +13,7 @@ export class Profile extends React.Component{
         return(
             <View style={styles.container} >
                 <View style={{ height: '25%'}} >
-                    <Header title="Janae Hartley"/>
+                    <Header title="Janae Hartley" editMode="true"/>
                 </View>                
                 <View style={{ height: '75%'}} >
                     <View style={[styles.headerText, {width: '90%', alignSelf: 'center'}]}>
@@ -99,8 +99,6 @@ const styles =  StyleSheet.create({
         borderRadius: 80/2,
     },
     headerText: {
-        color: '#44B0B2',
-        fontSize: 24,
         paddingLeft: 24,
         borderBottomWidth: 2,
         borderBottomColor: '#44B0B2',
@@ -108,7 +106,6 @@ const styles =  StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignSelf: 'center',
-        fontSize: 18,
         paddingTop: 10
     }
 })

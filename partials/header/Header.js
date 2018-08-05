@@ -10,7 +10,7 @@ export class Header extends React.Component{
     render() {
         return(
             <View>
-                <View backgroundColor="#75EAEC" height='86%'>
+                <View backgroundColor="#75EAEC" height='86%' style={{  }}>
                     <View style={styles.menuButtonContainer}>
                         <Image  source={ require("./menu-4-256.png")}
                                 style={styles.menuButton} />
@@ -18,6 +18,12 @@ export class Header extends React.Component{
                     <Text style={styles.titleText}>
                         {this.props.title}
                     </Text>
+                    { this.props.editMode && (
+                        <View style={styles.editButtonContainer}>
+                            <Image  source={ require("./edit.png")}
+                                    style={styles.editButton} />
+                        </View>
+                    )}
                 </View>
                 <View backgroundColor="#fff" height='7%'>
                 </View>
@@ -44,6 +50,23 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         marginTop: 40,
         marginLeft: 15
+    },
+    editButton: {
+        height: 30,
+        width: 30,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        marginTop: 12
+    },
+    editButtonContainer: {
+        position: 'absolute',
+        height: 60,
+        width: 60,
+        borderRadius: 80/2,
+        borderWidth: 3,
+        borderColor: '#fff',
+        top: 40,
+        right: 15
     },
     titleText: {
         alignSelf: 'center',
