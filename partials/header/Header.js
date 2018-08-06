@@ -1,28 +1,30 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-export class Header extends React.Component{
-    
+export class Header extends React.Component {
+
     static navigationOptions = {
         header: null
     }
 
     render() {
-        return(
+        return (
             <View>
-                <View backgroundColor="#75EAEC" height='86%' style={{  }}>
-                    <View style={styles.menuButtonContainer}>
-                        <Image  source={ require("./menu-4-256.png")}
+                <View backgroundColor="#75EAEC" height='86%' style={{}}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('DashboardRT')}>
+                        <View style={styles.menuButtonContainer}>
+                            <Image source={require("./menu-4-256.png")}
                                 style={styles.menuButton} />
-                    </View>
+                        </View>
+                    </TouchableOpacity>
                     <Text style={styles.titleText}>
                         {this.props.title}
                     </Text>
-                    { this.props.editMode && (
-                        <View style={styles.editButtonContainer}>
-                            <Image  source={ require("./edit.png")}
+                    {this.props.editMode && (
+                        <TouchableOpacity style={ styles.editButtonContainer } onPress={() => this.props.navigation.navigate(this.props.editPath)}>
+                                <Image source={require("./edit.png")}
                                     style={styles.editButton} />
-                        </View>
+                        </TouchableOpacity>
                     )}
                 </View>
                 <View backgroundColor="#fff" height='7%'>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
     menuButtonContainer: {
         height: 60,
         width: 60,
-        borderRadius: 80/2,
+        borderRadius: 80 / 2,
         borderWidth: 3,
         borderColor: '#fff',
         marginTop: 40,
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         height: 60,
         width: 60,
-        borderRadius: 80/2,
+        borderRadius: 80 / 2,
         borderWidth: 3,
         borderColor: '#fff',
         top: 40,

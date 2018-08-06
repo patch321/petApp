@@ -13,7 +13,7 @@ export class Profile extends React.Component{
         return(
             <View style={styles.container} >
                 <View style={{ height: '25%'}} >
-                    <Header title="Janae Hartley" editMode="true"/>
+                    <Header title="Janae Hartley" editMode="true" editPath="ProfileEditRT" navigation = { this.props.navigation } />
                 </View>                
                 <View style={{ height: '75%'}} >
                     <View style={[styles.headerText, {width: '90%', alignSelf: 'center'}]}>

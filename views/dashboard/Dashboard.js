@@ -10,10 +10,6 @@ export class Dashboard extends React.Component{
         header: null
     }
 
-    componentWillUnmount() {
-
-    }
-
     render(){
         return(
             <View style={styles.container}>
