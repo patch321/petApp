@@ -6,7 +6,15 @@ import { Header } from "../partials/header/Header";
 export class ProfileEdit extends React.Component {
     static navigationOptions = {
         header: null
-    }
+	}
+	
+	onSave(){
+
+	}
+
+	onCancel(){
+
+	}
 
     render() {
         return (
@@ -15,7 +23,11 @@ export class ProfileEdit extends React.Component {
                     <Header navigation={this.props.navigation} />
                 </View>
                 <View style={{ height: '12%' }} ></View>
-                <ScrollView style={{ height: '65%', paddingTop: 40 }}>
+				<ScrollView style={{ height: '65%', paddingTop: 40 }}>
+					<View style={[styles.infoRow, { width: '90%' }]}>
+						<Text style={{ color: '#44B0B2', fontSize: 20 }} >Profile Picture</Text>
+						<Text style={{ color: "#44B0B2", fontSize: 20 }} >Change</Text>
+					</View>
                     <View style={[styles.infoRow, { width: '90%' }]}>
                         <Text style={{ color: '#44B0B2', fontSize: 20 }} >First Name</Text>
                         <TextInput style={{ color: "#707070", fontSize: 20 }} >Janae</TextInput>
@@ -67,8 +79,8 @@ export class ProfileEdit extends React.Component {
                     </View>
 
                     <View style={{ paddingBottom: 120 }} >
-                        <Button title='Save' onPress={""}></Button>
-                        <Button title='Cancel' onPress={""}></Button>
+                        <Button title='Save' onPress={this.onSave}></Button>
+                        <Button title='Cancel' onPress={this.onCancel}></Button>
                     </View>
                 </ScrollView>
 
