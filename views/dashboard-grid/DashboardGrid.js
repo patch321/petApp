@@ -21,7 +21,7 @@ export class DashboardGrid extends React.Component{
                             profile
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.gridButton}> 
+                    <TouchableOpacity style={styles.gridButton} onPress={() => this.props.navigation.navigate('PetSelectionRT')} > 
                         <Image  source={ require('./paw.png')} 
                                 style={{alignSelf: 'center'}}
                         />

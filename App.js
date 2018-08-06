@@ -3,12 +3,14 @@ import { StyleSheet } from 'react-native';
 import { FluidNavigator } from "react-navigation-fluid-transitions";
 import { Dashboard } from "./views/dashboard/Dashboard.js";
 import { Profile } from "./views/profile/Profile.js";
-import { ProfileEdit } from './views/profile-edit.js';
+import { ProfileEdit } from './views/profile-edit/ProfileEdit.js';
+import { PetSelection } from "./views/pet-selection/PetSelection.js";
 
 const Navigator = FluidNavigator({
 	DashboardRT: { screen: Dashboard },
 	ProfileRT: { screen : Profile},
-	ProfileEditRT: { screen: ProfileEdit}
+	ProfileEditRT: { screen: ProfileEdit},
+	PetSelectionRT: { screen: PetSelection }
 },{
 
 })
