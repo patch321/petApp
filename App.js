@@ -1,16 +1,18 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { FluidNavigator } from "react-navigation-fluid-transitions";
+import { createStackNavigator } from "react-navigation";
 import { Dashboard } from "./views/dashboard/Dashboard.js";
 import { Profile } from "./views/profile/Profile.js";
 import { ProfileEdit } from './views/profile-edit/ProfileEdit.js';
 import { PetSelection } from "./views/pet-selection/PetSelection.js";
+import { PetDetails } from "./views/pet-details/PetDetails.js";
 
-const Navigator = FluidNavigator({
+const Navigator = createStackNavigator({
 	DashboardRT: { screen: Dashboard },
 	ProfileRT: { screen : Profile},
 	ProfileEditRT: { screen: ProfileEdit},
-	PetSelectionRT: { screen: PetSelection }
+	PetSelectionRT: { screen: PetSelection },
+	PetDetailsRT: { screen: PetDetails }
 },{
 
 })

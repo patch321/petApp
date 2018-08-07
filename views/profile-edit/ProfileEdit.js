@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, TextInput, View, Image, StyleSheet, ScrollView, Button, TouchableOpacity } from "react-native";
-import { Transition } from "react-navigation-fluid-transitions";
 import { Header } from "../../partials/header/Header";
 import { FontAwesome } from "@expo/vector-icons";
 
@@ -23,8 +22,8 @@ export class ProfileEdit extends React.Component {
                 <View style={{ height: '25%' }}>
                     <Header navigation={this.props.navigation} />
                 </View>
-                <View style={{ height: '10%' }} ></View>
-				<ScrollView style={{ height: '65%', paddingTop: 40 }}>
+                <View style={{ height: '10%', backgroundColor: '#fff' }} ></View>
+				<ScrollView style={{ height: '65%', paddingTop: 40, backgroundColor: '#fff' }}>
 					<View style={[styles.infoRow, { width: '90%' }]}>
 						<Text style={{ color: '#44B0B2', fontSize: 20 }} >Profile Picture</Text>
 						<Text style={{ color: "#44B0B2", fontSize: 20 }} >
@@ -98,12 +97,10 @@ export class ProfileEdit extends React.Component {
 
 
                 {/* Profile Pic */}
-                <Transition shared="profilePic">
                     <View style={styles.profileOutline}>
                         <Image  source={{uri:'https://image.ibb.co/gSR7Tz/cutmypic_1.png'}} 
                             style={styles.profilePic}/>
                     </View>
-                </Transition>
             </View >
         )
     }

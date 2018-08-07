@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { Foundation } from "@expo/vector-icons";
+import { View, Text, Image, TouchableWithoutFeedback, TouchableOpacity, StyleSheet } from "react-native";
 import Carousel from 'react-native-snap-carousel';
 
 export class PetSelection extends React.Component {
@@ -11,13 +10,15 @@ export class PetSelection extends React.Component {
 
     _renderItem({ item, index }) {
         return (
-            <View style={{ alignSelf: 'center' }}>
-                <View style={styles.profileOutline}>
-                    <Image source={item.imgUrl}
-                        style={styles.profilePic} />
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('PetDetailsRT')}>
+                <View style={{ alignSelf: 'center' }} >
+                    <View style={styles.profileOutline}>
+                        <Image source={item.imgUrl}
+                            style={styles.profilePic} />
+                    </View>
+                    <Text style={styles.petName} >{item.petName}</Text>
                 </View>
-                <Text style={styles.petName} >{item.petName}</Text>
-            </View>
+            </TouchableWithoutFeedback>
         );
     }
 
@@ -40,7 +41,7 @@ export class PetSelection extends React.Component {
                     <View style={{ height: 266 }} >
                         <Carousel
                             data={data}
-                            renderItem={this._renderItem}
+                            renderItem={this._renderItem.bind(this)}
                             sliderWidth={700}
                             itemWidth={200}
                             inactiveSlideScale={.5}

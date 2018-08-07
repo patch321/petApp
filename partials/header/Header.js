@@ -21,7 +21,7 @@ export class Header extends React.Component {
                         {this.props.title}
                     </Text>
                     {this.props.editMode && (
-                        <TouchableOpacity style={ styles.editButtonContainer } onPress={() => this.props.navigation.navigate(this.props.editPath)}>
+                        <TouchableOpacity style={ styles.editButtonContainer } onPress={() => this.props.navigation.navigate(this.props.secondaryButtonPath)}>
                                 <Image source={require("./edit.png")}
                                     style={styles.editButton} />
                         </TouchableOpacity>

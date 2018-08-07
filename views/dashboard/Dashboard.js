@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { DashboardGrid } from "../dashboard-grid/DashboardGrid";
-import { Transition } from "react-navigation-fluid-transitions";
 import { Header } from "../../partials/header/Header";
 
 export class Dashboard extends React.Component{
@@ -23,12 +22,10 @@ export class Dashboard extends React.Component{
                 </View>
                 <DashboardGrid style={{height: '50%'}} navigation={ this.props.navigation } />
         {/* Profile Picture */}
-                <Transition shared="profilePic">
                     <View style={styles.profileOutline}>
                         <Image  source={{uri:'https://image.ibb.co/gSR7Tz/cutmypic_1.png'}} 
                             style={styles.profilePic}/>
                     </View>
-                </Transition>
             </View>
         );
     }

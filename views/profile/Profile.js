@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Transition } from "react-navigation-fluid-transitions";
 import { Header } from "../../partials/header/Header";
 
 export class Profile extends React.Component{
@@ -13,9 +12,9 @@ export class Profile extends React.Component{
         return(
             <View style={styles.container} >
                 <View style={{ height: '25%'}} >
-                    <Header title="Janae Hartley" editMode="true" editPath="ProfileEditRT" navigation = { this.props.navigation } />
+                    <Header title="Janae Hartley" editMode="true" secondaryButtonPath="ProfileEditRT" navigation = { this.props.navigation } />
                 </View>                
-                <View style={{ height: '75%'}} >
+                <View style={{ height: '75%', backgroundColor: '#fff'}} >
                     <View style={[styles.headerText, {width: '90%', alignSelf: 'center'}]}>
                         <Text style={{paddingTop: 60, fontSize: 24, color: "#44B0B2"}}> Personal </Text>
                     </View>
@@ -66,12 +65,10 @@ export class Profile extends React.Component{
                 </View>
         
         {/* Profile Pic */}
-                <Transition shared="profilePic">
                     <View style={styles.profileOutline}>
                         <Image  source={{uri:'https://image.ibb.co/gSR7Tz/cutmypic_1.png'}} 
                             style={styles.profilePic}/>
                     </View>
-                </Transition>
             </View>
         )
     }
